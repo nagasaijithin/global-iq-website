@@ -20,52 +20,653 @@
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
-        <div
-          class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0"
+    <!-- navbar start -->
+    <header class="text-gray-600 body-font">
+      <div
+        class="my-header-continer container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+      >
+        <a
+          class="my-header-logo flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
         >
-          <h2 class="text-gray-900 text-lg font-medium title-font mb-5">
-            Sign Up
-          </h2>
-          <div class="relative mb-4">
-            <label for="full-name" class="leading-7 text-sm text-gray-600"
-              >Full Name</label
+          <img src="./assets/logo.png" alt="" />
+        </a>
+        <nav
+          class="my-nav md:ml-auto flex flex-wrap items-center text-base justify-center"
+        >
+          <a class="mx-5 cursor-pointer">Home</a>
+          <a class="mx-5 cursor-pointer">Courses</a>
+          <a class="mx-5 cursor-pointer">About</a>
+          <div
+            class="my-dropdown-wapper dropdown inline px-4 cursor-pointer text-base tracking-wide"
+          >
+            <a>Student Corner</a>
+            <div
+              class="my-dropdown-menu dropdown-menu absolute hidden h-auto flex pt-4"
             >
+              <ul class="my-dropdown-menu-ul block w-full shadow px-12 py-8">
+                <li class="py-1">
+                  <a class="block text-base cursor-pointer"
+                    >Student Registration</a
+                  >
+                </li>
+                <li class="py-1">
+                  <a class="block text-base cursor-pointer"
+                    >Certification verification</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a class="mx-5 cursor-pointer">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <!-- navbar end -->
+
+    <!-- hero section start -->
+
+    <section class="my-hero text-gray-600 body-font">
+      <div
+        class="my-hero-continer container mx-auto flex flex-wrap items-center justify-center"
+      >
+        <div
+          class="my-form-wapper lg:w-2/6 md:w-1/2 p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0"
+        >
+          <h2 class="text-medium font-medium title-font">TALK TO OUR</h2>
+          <h2 class="my-hero-form-title text-lg font-medium title-font mb-8">
+            EXPERTS
+          </h2>
+          <div class="relative mb-3">
+            <!-- <label for="name" class="leading-7 text-sm">Name</label> -->
             <input
               type="text"
-              id="full-name"
-              name="full-name"
-              class="try-email w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              id="name"
+              name="name"
+              placeholder="Name"
+              class="try-email w-full border border-white-300 text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
-          <div class="relative mb-4">
-            <label for="email" class="leading-7 text-sm text-gray-600"
-              >Email</label
-            >
+          <div class="relative mb-3">
+            <!-- <label for="email" class="leading-7 text-sm">Phone</label> -->
             <input
-              type="email"
-              id="email"
-              name="email"
-              class="try-pass w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              type="text"
+              id="phone"
+              name="phone"
+              placeholder="Phone"
+              class="try-pass w-full border border-white-300 text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
+          </div>
+          <div class="relative mb-3">
+            <!-- <label for="details" class="leading-7 text-sm">Details</label> -->
+
+            <textarea
+              id="details"
+              name="message"
+              placeholder="Message"
+              class="w-full border border-white-300 h-32 text-base outline-none py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+            ></textarea>
+          </div>
+          <div class="relative mb-3 my-checkbox-wapper">
+            <input
+              type="checkbox"
+              id="checkbox"
+              name="checkbox"
+              class="try-pass w-full border border-white-300 text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+            <p>
+              Please tick this box to indicate that you understand that your
+              personal data will be used in accordance with the Privacy Policy
+              here *
+            </p>
           </div>
           <button
-            class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg btn2"
+            class="flex mx-auto text-white py-2 px-8 focus:outline-none text-lg my-btn"
           >
-            Button
+            Submit
           </button>
-          <p class="text-xs text-gray-500 mt-3">
-            <i class="fab fa-accusoft"></i>
-          </p>
         </div>
       </div>
-      <a href="./public/login.html">login</a>
-      <a href="./public/dasbord.html">dasbord</a>
-      <a href="./public/studentregistration.html">student registration</a>
+
+      <div class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+
+          <div class="slide first">
+            <img src="./assets/slide-img-1.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./assets/slide-img-2.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./assets/slide-img-1.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./assets/slide-img-2.jpg" alt="" />
+          </div>
+
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+        </div>
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+      </div>
     </section>
+    <!-- hero section end -->
+    <!-- coures section start -->
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="text-center mb-10">
+          <h1
+            class="my-title sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-6"
+          >
+            POPULAR COURSES
+          </h1>
+          <p
+            class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto my-5 text-gray-500s"
+          >
+            Elevate your skills with most in-demand courses
+          </p>
+          <div class="flex mt-10 justify-center">
+            <div
+              class="my-course-dwn-bar rounded-full bg-indigo-500 inline-flex"
+            ></div>
+          </div>
+        </div>
+        <div class="container px-5 py-14 mx-auto text-center">
+          <div class="flex inline-flex mr-2" role="group">
+            <button
+              type="button"
+              class="my-course-btn focus:outline-none bg-white text-sm py-3 px-20 rounded-l-md hover:shadow-lg hover:text-white"
+            >
+              College Students
+            </button>
+            <button
+              type="button"
+              class="my-course-btn focus:outline-none bg-white text-sm py-3 px-20 hover:shadow-lg hover:text-white"
+            >
+              Job Seekers
+            </button>
+            <button
+              type="button"
+              class="my-clicked-btn my-course-btn focus:outline-none bg-white text-white text-sm py-3 px-20 hover:shadow-lg"
+            >
+              All Courses
+            </button>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap -m-4">
+          <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+            <div class="flip-card my-c-block lg:w-1/3 md:w-1/2 w-full">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Java</h1>
+                  <p>
+                    Java is a general-purpose programming language that is
+                    class-based, object-oriented and designed to have as few
+                    implementation dependencies.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+            <div class="flip-card my-c-block lg:w-1/3 md:w-1/2 w-full">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Python</h1>
+                  <p>
+                    Python is an interpreted, high-level, general-purpose
+                    programming language. Created by Python does not support
+                    tail call optimization and nowadays it is the most trending
+                    course.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+            <div class="flip-card my-c-block lg:w-1/3 md:w-1/2 w-full">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Oracle</h1>
+                  <p>
+                    The Oracle Certification Program certifies candidates on
+                    skills and knowledge related to Oracle products and
+                    technologies and nowadays it is the most popular course.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+            <div class="flip-card my-c-block lg:w-1/3 md:w-1/2 w-full">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>C-Language</h1>
+                  <p>
+                    C is a general-purpose, procedural computer programming
+                    language supporting structured A standards-compliant C
+                    program nowadays it is the most trending course.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+            <div class="flip-card my-c-block lg:w-1/3 md:w-1/2 w-full">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Tally</h1>
+                  <p>
+                    Tally commonly refers to counting or to summation of a total
+                    amount, debt, or score Tally for knitting, or row counter
+                    for hand knitting.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+            <div class="flip-card my-c-block lg:w-1/3 md:w-1/2 w-full">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Ms-office</h1>
+                  <p>
+                    Microsoft Office, or simply Office, is a family of client
+                    software, server software, and services The complexity of
+                    use and learning curve led to little usage.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+            <div class="flip-card my-c-block lg:w-1/3 md:w-1/2 w-full">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Photoshop</h1>
+                  <p>
+                    Adobe Creative Suite (CS) is a now-discontinued software
+                    suite of graphic design, video editing webdevelopmentetc
+                    nowadays it is the most popular course ex:photoshop.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+            <div class="flip-card my-c-block lg:w-1/3 md:w-1/2 w-full">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Website designing</h1>
+                  <p>
+                    Web design encompasses many different skills and disciplines
+                    in the production and maintenance of websites and it has
+                    different types.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+            <div class="flip-card my-c-block lg:w-1/3 md:w-1/2 w-full">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Gst</h1>
+                  <p>
+                    Goods and Services Tax (GST) is an indirect tax (or
+                    consumption tax) imposed in India on the revenues of the
+                    States from the impact of GST.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+            <div class="flip-card my-c-block lg:w-1/3 md:w-1/2 w-full">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Pgdca</h1>
+                  <p>
+                    A postgraduate diploma is a postgraduate qualification
+                    awarded after a university degree,This could be a vocational
+                    course studied after an academic degree Pgdca.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+            <div class="flip-card my-c-block lg:w-1/3 md:w-1/2 w-full">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Dca</h1>
+                  <p>
+                    Diploma in Computer Applications (DCA) is a one year diploma
+                    course in the field of computer applications. It can be
+                    pursued after 10+2 and postgraduation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
+            <div class="flip-card my-c-block lg:w-1/3 md:w-1/2 w-full">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Spoken English</h1>
+                  <p>
+                    Global IQ Spoken English Institute welcomes you to join our
+                    carefully designed Basic English speaking course. At our
+                    Institute, we are committed to giving you a great and a
+                    different English learning experience with ensured results,
+                    which other spoken English classes might struggle with.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- coures section end -->
+    <!-- ga section start -->
+    <div class="my-ga">
+      <div class="my-ga-continer">
+        <div class="my-ga-content-wapper">
+          <div class="text-center mb-10">
+            <h1
+              class="my-title sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-6"
+            >
+              GLOBAL IQ ADVANTAGE
+            </h1>
+            <p
+              class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto my-5 text-gray-500s"
+            >
+              Just a few reasins why we are your go-to career partner
+            </p>
+            <div class="flex mt-10 justify-center">
+              <div
+                class="my-course-dwn-bar rounded-full bg-indigo-500 inline-flex"
+              ></div>
+            </div>
+          </div>
+          <div class="content-img-grid">
+            <div class="grid-chiled grid-chiled1">
+              <img src="./assets/iso-img.png" alt="" />
+              <h2>ISO Certified</h2>
+            </div>
+            <div class="grid-chiled grid-chiled1">
+              <img src="./assets/realtime-img.png" alt="" />
+              <h2>Real time Training</h2>
+            </div>
+            <div class="grid-chiled grid-chiled1">
+              <img src="./assets/wllfurnished-img.png" alt="" />
+              <h2>Well Furnished Labs</h2>
+            </div>
+            <div class="grid-chiled grid-chiled1">
+              <img src="./assets/corporate.png" alt="" />
+              <h2>Corporate Atmoshpere</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="my-ga-video-wapper">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/loi58L9NkgE"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    <!-- ga section end -->
+    <!-- aboutus section start -->
+
+    <section class="my-about-section">
+      <div class="text-center my-8">
+        <h1
+          class="my-title sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-6"
+        >
+          ABOUT US
+        </h1>
+
+        <div class="flex mt-5 justify-center">
+          <div
+            class="my-course-dwn-bar rounded-full bg-indigo-500 inline-flex"
+          ></div>
+        </div>
+      </div>
+      <div
+        class="container mx-auto flex px-5 py-0 md:flex-row flex-col items-center"
+      >
+        <div
+          class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+        >
+          <p class="my-about-content my-8 leading-relaxed">
+            Global IQ is the one of the Best Computer institute in narasannapeta
+            It offers different courses with top most faculty and well equipped
+            Ac computer Labs.Global IQ institute was founded by Korada Srikanth
+            the leading evangelist for GST Accounts. Korada Srikanth is an
+            entrepreneur and Trainer in Global IQ, Global IQ was founded on the
+            year 2020 october to teach students in different computer courses
+            and Global IQ is ISO Certified institute
+          </p>
+        </div>
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <img
+            class="object-cover object-center rounded"
+            alt="hero"
+            src="https://dummyimage.com/720x600"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- aboutus section end -->
+    <!-- gellary section start -->
+    <div class="my-gallary">
+      <div>
+        <div class="text-center my-8">
+          <h1
+            class="my-title sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-6"
+          >
+            GALLERY
+          </h1>
+
+          <div class="flex mt-5 justify-center">
+            <div
+              class="my-course-dwn-bar rounded-full bg-indigo-500 inline-flex"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="my-gallary-img-wapper">
+        <div class="card">
+          <div class="card_part card_part-one"></div>
+
+          <!-- Photo 2 -->
+          <div class="card_part card_part-two"></div>
+
+          <!-- Photo 3 -->
+          <div class="card_part card_part-three"></div>
+
+          <!-- Photo 4 -->
+          <div class="card_part card_part-four"></div>
+        </div>
+      </div>
+    </div>
+    <!-- gellary section end -->
+
+    <!-- contact us section start -->
+    <section class="my-about-section also-contact-section">
+      <div class="text-center my-8">
+        <h1
+          class="my-title sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-6"
+        >
+          CONTACT US
+        </h1>
+
+        <div class="flex mt-5 justify-center">
+          <div
+            class="my-course-dwn-bar rounded-full bg-indigo-500 inline-flex"
+          ></div>
+        </div>
+      </div>
+      <div
+        class="container mx-auto flex px-5 py-0 md:flex-row flex-col items-center"
+      >
+        <div
+          class="my-contactus-content-wapper lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+        >
+          <div>
+            <h2>Location</h2>
+            <p>Ysr junction Narasannapeta-532421 Srikakulam Dist</p>
+          </div>
+          <div>
+            <h2>Reach Us</h2>
+            <p>Phone :- 9966302065</p>
+            <p>Gmail:- Globaliq@gmail.com</p>
+          </div>
+          <div>
+            <h3>Follow Us</h3>
+            <div>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="my-map-wapper lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15465.196504247673!2d80.11123521972573!3d14.294044783462777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4c58409f550bab%3A0x4eabf6f68e4ba70b!2sKrishnapatnam%2C%20Andhra%20Pradesh%20524344!5e0!3m2!1sen!2sin!4v1615133024067!5m2!1sen!2sin"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- contact us section end -->
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
