@@ -1,5 +1,3 @@
-import "../scss/str.scss";
-
 const fristname = document.querySelector(".my-first-name");
 const lastname = document.querySelector(".my-last-name");
 const selectedcourse = document.querySelector(".my-select-course");

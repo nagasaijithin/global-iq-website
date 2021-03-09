@@ -20,257 +20,77 @@
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../scss/dasbord.scss" />
   </head>
   <body>
-    <form class="add-student-form">
-      <div>
-        <label for="">Student Id</label>
+    <div class="my-addstudent-form-wapper">
+      <i class="fas fa-times"></i>
+      <form class="add-student-form">
+        <div>
+          <label for="">Student Id</label>
+          <input
+            type="text"
+            class="my-add-student-id try-pass w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+          />
+        </div>
+        <div>
+          <label
+            for="my-file"
+            class="my-s-a-f-l text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg btn2"
+            >Add Student certication</label
+          >
+          <input
+            type="file"
+            style="display: none"
+            id="my-file"
+            class="my-add-student-ctc"
+          />
+        </div>
         <input
-          type="text"
-          class="my-add-student-id try-pass w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-        />
-      </div>
-      <div>
-        <label
-          for="my-file"
+          type="submit"
+          value="Save"
           class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg btn2"
-          >Add Student certication</label
-        >
-        <input
-          type="file"
-          style="display: none"
-          id="my-file"
-          class="my-add-student-ctc"
         />
-      </div>
-    </form>
-    <div class="text-gray-900 bg-gray-200">
-      <div class="p-4 flex">
-        <h1 class="text-3xl">Users</h1>
+
+        <h1>Enter student id and certication</h1>
+      </form>
+    </div>
+    <div class="text-gray-900">
+      <div class="p-4 flex justify-between">
+        <h1 class="text-3xl">Students</h1>
+        <button
+          type="button"
+          class="my-add-student-btn text-sm bg-indigo-500 hover:bg-indigo-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+        >
+          Add a Student
+        </button>
       </div>
       <div class="px-3 py-4 flex justify-center">
         <table class="w-full text-md bg-white shadow-md rounded mb-4">
-          <tbody>
+          <thead>
             <tr class="border-b">
-              <th class="text-left p-3 px-5">Name</th>
-              <th class="text-left p-3 px-5">Email</th>
-              <th class="text-left p-3 px-5">Role</th>
+              <th class="text-left p-3 px-5">Student Id</th>
+              <th class="text-left p-3 px-5">Certified</th>
               <th></th>
             </tr>
-            <tr class="border-b hover:bg-orange-100 bg-gray-100">
+          </thead>
+          <tbody class="all-student-data">
+            <tr
+              class="student-data-wapper border-b hover:bg-orange-100 bg-gray-100"
+            >
               <td class="p-3 px-5">
-                <input type="text" value="user.name" class="bg-transparent" />
-              </td>
-              <td class="p-3 px-5">
-                <input type="text" value="user.email" class="bg-transparent" />
-              </td>
-              <td class="p-3 px-5">
-                <select value="user.role" class="bg-transparent">
-                  <option value="user">user</option>
-                  <option value="admin">admin</option>
-                </select>
-              </td>
-              <td class="p-3 px-5 flex justify-end">
-                <button
-                  type="button"
-                  class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Save</button
-                ><button
-                  type="button"
-                  class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-            <tr class="border-b hover:bg-orange-100">
-              <td class="p-3 px-5">
-                <input type="text" value="user.name" class="bg-transparent" />
+                <h1>Loading.....</h1>
               </td>
               <td class="p-3 px-5">
-                <input type="text" value="user.email" class="bg-transparent" />
+                <h1>Loading....</h1>
               </td>
-              <td class="p-3 px-5">
-                <select value="user.role" class="bg-transparent">
-                  <option value="user">user</option>
-                  <option value="admin">admin</option>
-                </select>
-              </td>
-              <td class="p-3 px-5 flex justify-end">
-                <button
-                  type="button"
-                  class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Save</button
-                ><button
-                  type="button"
-                  class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
 
-            <tr class="border-b hover:bg-orange-100">
-              <td class="p-3 px-5">
-                <input type="text" value="user.name" class="bg-transparent" />
-              </td>
-              <td class="p-3 px-5">
-                <input type="text" value="user.email" class="bg-transparent" />
-              </td>
-              <td class="p-3 px-5">
-                <select value="user.role" class="bg-transparent">
-                  <option value="user">user</option>
-                  <option value="admin">admin</option>
-                </select>
-              </td>
               <td class="p-3 px-5 flex justify-end">
                 <button
                   type="button"
-                  class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                  class="my-data-btn text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
                 >
-                  Save</button
-                ><button
-                  type="button"
-                  class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-            <tr class="border-b hover:bg-orange-100 bg-gray-100">
-              <td class="p-3 px-5">
-                <input type="text" value="user.name" class="bg-transparent" />
-              </td>
-              <td class="p-3 px-5">
-                <input type="text" value="user.email" class="bg-transparent" />
-              </td>
-              <td class="p-3 px-5">
-                <select value="user.role" class="bg-transparent">
-                  <option value="user">user</option>
-                  <option value="admin">admin</option>
-                </select>
-              </td>
-              <td class="p-3 px-5 flex justify-end">
-                <button
-                  type="button"
-                  class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Save</button
-                ><button
-                  type="button"
-                  class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-            <tr class="border-b hover:bg-orange-100">
-              <td class="p-3 px-5">
-                <input type="text" value="user.name" class="bg-transparent" />
-              </td>
-              <td class="p-3 px-5">
-                <input type="text" value="user.email" class="bg-transparent" />
-              </td>
-              <td class="p-3 px-5">
-                <select value="user.role" class="bg-transparent">
-                  <option value="user">user</option>
-                  <option value="admin">admin</option>
-                </select>
-              </td>
-              <td class="p-3 px-5 flex justify-end">
-                <button
-                  type="button"
-                  class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Save</button
-                ><button
-                  type="button"
-                  class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-            <tr class="border-b hover:bg-orange-100 bg-gray-100">
-              <td class="p-3 px-5">
-                <input type="text" value="user.name" class="bg-transparent" />
-              </td>
-              <td class="p-3 px-5">
-                <input type="text" value="user.email" class="bg-transparent" />
-              </td>
-              <td class="p-3 px-5">
-                <select value="user.role" class="bg-transparent">
-                  <option value="user">user</option>
-                  <option value="admin">admin</option>
-                </select>
-              </td>
-              <td class="p-3 px-5 flex justify-end">
-                <button
-                  type="button"
-                  class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Save</button
-                ><button
-                  type="button"
-                  class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-            <tr class="border-b hover:bg-orange-100">
-              <td class="p-3 px-5">
-                <input type="text" value="user.name" class="bg-transparent" />
-              </td>
-              <td class="p-3 px-5">
-                <input type="text" value="user.email" class="bg-transparent" />
-              </td>
-              <td class="p-3 px-5">
-                <select value="user.role" class="bg-transparent">
-                  <option value="user">user</option>
-                  <option value="admin">admin</option>
-                </select>
-              </td>
-              <td class="p-3 px-5 flex justify-end">
-                <button
-                  type="button"
-                  class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Save</button
-                ><button
-                  type="button"
-                  class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-            <tr class="border-b hover:bg-orange-100">
-              <td class="p-3 px-5">
-                <input type="text" value="user.name" class="bg-transparent" />
-              </td>
-              <td class="p-3 px-5">
-                <input type="text" value="user.email" class="bg-transparent" />
-              </td>
-              <td class="p-3 px-5">
-                <select value="user.role" class="bg-transparent">
-                  <option value="user">user</option>
-                  <option value="admin">admin</option>
-                </select>
-              </td>
-              <td class="p-3 px-5 flex justify-end">
-                <button
-                  type="button"
-                  class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Save</button
-                ><button
-                  type="button"
-                  class="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Delete
+                  Loading...
                 </button>
               </td>
             </tr>

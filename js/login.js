@@ -1,26 +1,24 @@
-import "../scss/login.scss";
-
 const form = document.querySelector(".my-login-form");
 const email = document.querySelector(".my-login-email");
 const password = document.querySelector(".my-login-pass");
-
-// firebase.auth().onAuthStateChanged((user) => {
-//   if (user) {
-//     // User is signed in, see docs for a list of available properties
-//     // https://firebase.google.com/docs/reference/js/firebase.User
-//     var uid = user.uid;
-//     uid && window.location.replace("/public/dasbord.html");
-//     // ...
-//   } else {
-//     // User is signed out
-//     // ...
-//   }
-// });
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    var uid = user.uid;
+    console.log(uid);
+    uid && window.location.replace("/public/dasbord.html");
+    // ...
+  } else {
+    // User is signed out
+    console.log("hello");
+    // ...
+  }
+});
 
 form.addEventListener("submit", (e) => {
   console.log(email.value);
   console.log(password.value);
-
   firebase
     .auth()
     .signInWithEmailAndPassword(email.value, password.value)
@@ -28,7 +26,7 @@ form.addEventListener("submit", (e) => {
       // Signed in
       var user = userCredential.user;
       console.log(user);
-      window.location.replace("http://localhost:1234/public/dasbord.html");
+      window.location.replace("/public/dasbord.html");
 
       // ...
     })

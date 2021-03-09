@@ -27,6 +27,8 @@
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
+
+    <link rel="stylesheet" href="./scss/app.scss" />
   </head>
   <body>
     <!-- navbar start -->
@@ -83,7 +85,7 @@
         class="my-hero-continer container mx-auto flex flex-wrap items-center justify-center"
       >
         <div
-          class="my-form-wapper lg:w-2/6 md:w-1/2 p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0"
+          class="my-form-wapper lg:w-1/4 md:w-1/2 p-5 flex flex-col md:ml-auto w-full mt-10 md:mt-0"
         >
           <h2 class="text-medium font-medium title-font">TALK TO OUR</h2>
           <h2 class="my-hero-form-title text-lg font-medium title-font mb-8">
@@ -113,10 +115,10 @@
             <!-- <label for="details" class="leading-7 text-sm">Details</label> -->
 
             <textarea
-              id="details"
+              id="message"
               name="message"
               placeholder="Message"
-              class="w-full border border-white-300 h-32 text-base outline-none py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+              class="w-full border border-white-300 h-20 text-base outline-none py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             ></textarea>
           </div>
           <div class="relative mb-3 my-checkbox-wapper">
@@ -196,11 +198,11 @@
             ></div>
           </div>
         </div>
-        <div class="container px-5 py-14 mx-auto text-center">
+        <div class="container px-5 pb-10 mx-auto text-center">
           <div class="flex inline-flex mr-2" role="group">
             <button
               type="button"
-              class="my-course-btn focus:outline-none bg-white text-sm py-3 px-20 rounded-l-md hover:shadow-lg hover:text-white"
+              class="my-course-btn focus:outline-none bg-white text-sm py-3 px-20 hover:shadow-lg hover:text-white"
             >
               College Students
             </button>
@@ -219,7 +221,7 @@
           </div>
         </div>
 
-        <div class="flex flex-wrap -m-4">
+        <!-- <div class="flex flex-wrap -m-4">
           <div class="lg:w-1/3 md:w-1/2 p-4 w-full">
             <div class="flip-card my-c-block lg:w-1/3 md:w-1/2 w-full">
               <div class="flip-card-inner">
@@ -486,6 +488,275 @@
               </div>
             </div>
           </div>
+        </div> -->
+
+        <div class="my-course-grid">
+          <div class="grid-chiled">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Java</h1>
+                  <p>
+                    Java is a general-purpose programming language that is
+                    class-based, object-oriented and designed to have as few
+                    implementation dependencies.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-chiled">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Python</h1>
+                  <p>
+                    Python is an interpreted, high-level, general-purpose
+                    programming language. Created by Python does not support
+                    tail call optimization and nowadays it is the most trending
+                    course.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-chiled">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Oracle</h1>
+                  <p>
+                    The Oracle Certification Program certifies candidates on
+                    skills and knowledge related to Oracle products and
+                    technologies and nowadays it is the most popular course.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-chiled">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>C-Language</h1>
+                  <p>
+                    C is a general-purpose, procedural computer programming
+                    language supporting structured A standards-compliant C
+                    program nowadays it is the most trending course.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-chiled">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Tally</h1>
+                  <p>
+                    Tally commonly refers to counting or to summation of a total
+                    amount, debt, or score Tally for knitting, or row counter
+                    for hand knitting.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-chiled">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Ms-office</h1>
+                  <p>
+                    Microsoft Office, or simply Office, is a family of client
+                    software, server software, and services The complexity of
+                    use and learning curve led to little usage.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-chiled">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Photoshop</h1>
+                  <p>
+                    Adobe Creative Suite (CS) is a now-discontinued software
+                    suite of graphic design, video editing webdevelopmentetc
+                    nowadays it is the most popular course ex:photoshop.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-chiled">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Website designing</h1>
+                  <p>
+                    Web design encompasses many different skills and disciplines
+                    in the production and maintenance of websites and it has
+                    different types.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-chiled">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Gst</h1>
+                  <p>
+                    Goods and Services Tax (GST) is an indirect tax (or
+                    consumption tax) imposed in India on the revenues of the
+                    States from the impact of GST.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-chiled">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Pgdca</h1>
+                  <p>
+                    A postgraduate diploma is a postgraduate qualification
+                    awarded after a university degree,This could be a vocational
+                    course studied after an academic degree Pgdca.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-chiled">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Dca</h1>
+                  <p>
+                    Diploma in Computer Applications (DCA) is a one year diploma
+                    course in the field of computer applications. It can be
+                    pursued after 10+2 and postgraduation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-chiled">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./assets/slide-img-1.png"
+                    alt="Avatar"
+                    style="width: 300px; height: 300px"
+                  />
+                </div>
+                <div class="flip-card-back">
+                  <h1>Spoken English</h1>
+                  <p>
+                    Global IQ Spoken English Institute welcomes you to join our
+                    carefully designed Basic English speaking course. At our
+                    Institute, we are committed to giving you a great and a
+                    different English learning experience with ensured results,
+                    which other spoken English classes might struggle with.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -674,9 +945,11 @@
     <a href="./public/dasbord.html">dashbord</a>
     <a href="./public/login.html">login</a>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-storage.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
@@ -695,6 +968,16 @@
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_7NhCA27YggBO7oNAbsd4m");
+      })();
     </script>
     <script src="./js/app.js"></script>
   </body>

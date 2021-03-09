@@ -1,35 +1,38 @@
-import "../scss/app.scss";
-console.log("hello");
-// const btn = document.querySelector(".btn2");
-const db = firebase.firestore();
-// btn.addEventListener("click", (e) => {
-//   // db.collection("students")
-//   //   .doc()
-//   //   .set({
-//   //     name: "naga saijithin 2",
-//   //     state: "AP",
-//   //     country: "IND",
-//   //   })
-//   //   .then(() => {
-//   //     console.log("Document successfully written!");
-//   //   })
-//   //   .catch((error) => {
-//   //     console.error("Error writing document: ", error);
-//   //   });
-// });
-
-// firebase.auth().onAuthStateChanged((user) => {
-//   if (user) {
-//     // User is signed in, see docs for a list of available properties
-//     // https://firebase.google.com/docs/reference/js/firebase.User
-//     var uid = user.uid;
-//     console.log(uid);
-//     // ...
-//   } else {
-//     // User is signed out
-//     // ...
-//   }
-// });
+const btn = document.querySelector(".my-btn");
+const inname = document.querySelector("#name");
+const inmessage = document.querySelector("#message");
+const inphone = document.querySelector("#phone");
+const incheckbox = document.querySelector("#checkbox");
+btn.addEventListener("click", (e) => {
+  if (
+    inname.value != "" &&
+    inphone.value != "" &&
+    inmessage.value != "" &&
+    incheckbox.checked != false
+  ) {
+    let obj = {
+      from_name: "Global Iq Website",
+      my_name: inname.value,
+      my_phone: inphone.value,
+      my_message: inmessage.value,
+    };
+    emailjs.send("service_24nwyab", "template_myg65tl", obj).then(
+      function (response) {
+        alert("SENT SUCCESS!");
+        inname.value = "";
+        inphone.value = "";
+        inmessage.value = "";
+        incheckbox.checked = false;
+      },
+      function (error) {
+        alert("FAILED...");
+      }
+    );
+  } else {
+    alert("Please Fill The Form");
+  }
+  e.preventDefault();
+});
 
 var counter = 1;
 setInterval(function () {
