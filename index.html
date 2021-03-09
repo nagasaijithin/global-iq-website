@@ -30,7 +30,7 @@
   </head>
   <body>
     <!-- navbar start -->
-    <header class="text-gray-600 body-font">
+    <header id="myhome" class="text-gray-600 body-font">
       <div
         class="my-header-continer container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
       >
@@ -42,9 +42,9 @@
         <nav
           class="my-nav md:ml-auto flex flex-wrap items-center text-base justify-center"
         >
-          <a class="mx-5 cursor-pointer">Home</a>
-          <a class="mx-5 cursor-pointer">Courses</a>
-          <a class="mx-5 cursor-pointer">About</a>
+          <a href="#myhome" class="mx-5 cursor-pointer">Home</a>
+          <a href="#mycourses" class="mx-5 cursor-pointer">Courses</a>
+          <a href="#myaboutus" class="mx-5 cursor-pointer">About</a>
           <div
             class="my-dropdown-wapper dropdown inline px-4 cursor-pointer text-base tracking-wide"
           >
@@ -54,19 +54,23 @@
             >
               <ul class="my-dropdown-menu-ul block w-full shadow px-12 py-8">
                 <li class="py-1">
-                  <a class="block text-base cursor-pointer"
+                  <a
+                    href="./public/studentregistration.html"
+                    class="block text-base cursor-pointer"
                     >Student Registration</a
                   >
                 </li>
                 <li class="py-1">
-                  <a class="block text-base cursor-pointer"
+                  <a
+                    href="./public/certificationverification.html"
+                    class="block text-base cursor-pointer"
                     >Certification verification</a
                   >
                 </li>
               </ul>
             </div>
           </div>
-          <a class="mx-5 cursor-pointer">Contact</a>
+          <a href="#mycontactus" class="mx-5 cursor-pointer">Contact</a>
         </nav>
       </div>
     </header>
@@ -173,7 +177,7 @@
     </section>
     <!-- hero section end -->
     <!-- coures section start -->
-    <section class="text-gray-600 body-font">
+    <section id="mycourses" class="text-gray-600 body-font">
       <div class="container px-5 py-24 mx-auto">
         <div class="text-center mb-10">
           <h1
@@ -542,7 +546,7 @@
     <!-- ga section end -->
     <!-- aboutus section start -->
 
-    <section class="my-about-section">
+    <section id="myaboutus" class="my-about-section">
       <div class="text-center my-8">
         <h1
           class="my-title sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-6"
@@ -618,7 +622,7 @@
     <!-- gellary section end -->
 
     <!-- contact us section start -->
-    <section class="my-about-section also-contact-section">
+    <section id="mycontactus" class="my-about-section also-contact-section">
       <div class="text-center my-8">
         <h1
           class="my-title sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-6"
@@ -667,7 +671,8 @@
       </div>
     </section>
     <!-- contact us section end -->
-
+    <a href="./public/dasbord.html">dashbord</a>
+    <a href="./public/login.html">login</a>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
