@@ -15,12 +15,28 @@ body {
   max-width: 100% !important;
   margin: 0;
   padding: 0rem 1.25rem;
+  height: 100%;
   & > .my-header-logo {
     width: 20%;
+    @media (max-width: 849px) {
+      width: 27%;
+    }
+    @media (max-width: 591px) {
+      width: 36%;
+    }
+    @media (max-width: 320px) {
+      width: 48%;
+    }
   }
   & > .my-nav,
   .my-dropdown-wapper {
     font-size: 1.4rem;
+  }
+}
+
+.my-nav {
+  @media (max-width: 852px) {
+    display: none;
   }
 }
 
@@ -48,6 +64,9 @@ body {
   position: relative;
   @media (max-width: 670px) {
     height: 53.3vh;
+  }
+  @media (max-width: 425px) {
+    height: 42.3vh;
   }
   & > .my-hero-continer {
     height: 100%;
@@ -123,10 +142,28 @@ body {
     font-size: 1.4rem;
   }
 }
-
+#myhome {
+  height: 12vh;
+}
+.mbl-nav {
+  font-size: 3rem;
+  cursor: pointer;
+  display: none;
+  @media (max-width: 852px) {
+    display: block;
+  }
+  @media (max-width: 425px) {
+    font-size: 2rem;
+  }
+  & > i {
+    border: 2px solid white;
+    padding: 0.3rem;
+  }
+}
 .my-ga {
   display: flex;
   align-items: center;
+  background: black;
   @media (max-width: $destoplarg) {
     flex-wrap: wrap;
   }
@@ -141,7 +178,7 @@ body {
     & > .my-ga-content-wapper {
       & > .content-img-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
         justify-content: center;
         align-items: center;
         grid-gap: 2rem;
@@ -193,6 +230,9 @@ body {
   margin: 0 auto;
   background: black;
   box-shadow: 1px 2px 20px -3px #313131d1;
+  @media (max-width: 482px) {
+    width: 86%;
+  }
 }
 .my-c-block {
   height: 15.2rem;
@@ -463,12 +503,20 @@ body {
 }
 
 .flip-card-front {
-  background-color: #bbb;
+  background-color: white;
   color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > img {
+    width: 42%;
+    padding: 1.3rem;
+  }
 }
 
 .flip-card-back {
-  background-color: #2980b9;
+  // background-color: #3e627a;
+  background-color: #163f7b;
   color: white;
   transform: rotateY(180deg);
   padding: 0.5rem;

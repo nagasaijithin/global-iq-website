@@ -11,7 +11,6 @@ firebase.auth().onAuthStateChanged((user) => {
     // ...
   } else {
     // User is signed out
-    console.log("hello");
     // ...
   }
 });
@@ -25,7 +24,6 @@ form.addEventListener("submit", (e) => {
     .then((userCredential) => {
       // Signed in
       var user = userCredential.user;
-      console.log(user);
       window.location.replace("/public/dasbord.html");
 
       // ...

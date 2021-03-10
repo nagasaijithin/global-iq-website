@@ -26,11 +26,9 @@
     <!-- navbar start -->
     <header id="myhome" class="text-gray-600 body-font">
       <div
-        class="my-header-continer container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+        class="my-header-continer container justify-between mx-auto flex p-5 items-center"
       >
-        <a
-          class="my-header-logo flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
-        >
+        <a class="my-header-logo">
           <img src="../assets/logo.png" alt="" />
         </a>
         <nav
@@ -66,12 +64,13 @@
           </div>
           <a href="/#mycontactus" class="mx-5 cursor-pointer">Contact</a>
         </nav>
+        <div class="mbl-nav"><i class="fas fa-bars"></i></div>
       </div>
     </header>
 
     <form class="my-form form bg-white p-6 my-10 mx-5 relative">
-      <h3 class="text-2xl text-gray-900 font-semibold">Let us call you!</h3>
-      <p class="text-gray-600">To help you choose your property</p>
+      <h3 class="text-2xl text-gray-900 font-semibold">Student Registration</h3>
+
       <div class="flex space-x-5 mt-5">
         <input
           type="text"
@@ -170,6 +169,15 @@
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
+    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_7NhCA27YggBO7oNAbsd4m");
+      })();
     </script>
     <script src="../js/str.js"></script>
   </body>

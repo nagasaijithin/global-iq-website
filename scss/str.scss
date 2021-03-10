@@ -4,8 +4,18 @@
   max-width: 100% !important;
   margin: 0;
   padding: 0rem 1.25rem;
+  height: 100%;
   & > .my-header-logo {
     width: 20%;
+    @media (max-width: 849px) {
+      width: 27%;
+    }
+    @media (max-width: 591px) {
+      width: 36%;
+    }
+    @media (max-width: 320px) {
+      width: 48%;
+    }
   }
   & > .my-nav,
   .my-dropdown-wapper {
@@ -29,5 +39,30 @@
       border: 1px solid rgb(255, 255, 255);
       margin: 1rem 0;
     }
+  }
+}
+
+.my-nav {
+  @media (max-width: 852px) {
+    display: none;
+  }
+}
+
+#myhome {
+  height: 12vh;
+}
+.mbl-nav {
+  font-size: 3rem;
+  cursor: pointer;
+  display: none;
+  @media (max-width: 852px) {
+    display: block;
+  }
+  @media (max-width: 425px) {
+    font-size: 2rem;
+  }
+  & > i {
+    border: 2px solid white;
+    padding: 0.3rem;
   }
 }

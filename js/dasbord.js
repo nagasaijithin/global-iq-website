@@ -3,11 +3,34 @@ const form = document.querySelector(".add-student-form");
 const studentCtc = document.querySelector(".my-add-student-ctc");
 const studentCtclabel = document.querySelector(".my-s-a-f-l");
 const studentId = document.querySelector(".my-add-student-id");
+const signoutbtn = document.querySelector("#signout");
+const auth = firebase.auth();
+signoutbtn.addEventListener("click", (e) => {
+  auth.signOut();
+  window.location.replace("/public/login.html");
+});
+
 studentCtc.addEventListener("change", (e) => {
   e.target.value == ""
     ? (studentCtclabel.innerHTML = "Add Student certication")
     : (studentCtclabel.innerHTML = "Image Added");
 });
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    var uid = user.uid;
+    if (!uid) {
+      window.location.replace("/public/login.html");
+    }
+    // ...
+  } else {
+    // User is signed out
+    window.location.replace("/public/login.html");
+    // ...
+  }
+});
+
 form.addEventListener("submit", (e) => {
   if (studentId.value != "" && studentCtc.value != "") {
     var storageRef = firebase.storage().ref();
@@ -42,19 +65,6 @@ form.addEventListener("submit", (e) => {
   }
 
   e.preventDefault();
-});
-
-firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    var uid = user.uid;
-    // ...
-  } else {
-    // User is signed out
-    uid && window.location.replace("http://localhost:1234/");
-    // ...
-  }
 });
 
 const addstudentsWapper = document.querySelector(".my-addstudent-form-wapper");

@@ -7,24 +7,43 @@ const address = document.querySelector(".my-address");
 
 const form = document.querySelector(".my-form");
 
+function sendmail() {
+  if (
+    fristname.value != "" &&
+    lastname.value != "" &&
+    selectedcourse.value != "" &&
+    phonenumber.value != "" &&
+    email.value != "" &&
+    address.value != ""
+  ) {
+    const obj = {
+      from_name: "Global Iq Website",
+      st_fristname: fristname.value,
+      st_lastname: lastname.value,
+      st_selectedcourse: selectedcourse.value,
+      st_phone: phonenumber.value,
+      st_email: email.value,
+      st_address: address.value,
+    };
+    emailjs.send("service_24nwyab", "template_tuqbo3m", obj).then(
+      function (response) {
+        alert("SENT SUCCESS!");
+        inname.value = "";
+        inphone.value = "";
+        inmessage.value = "";
+        incheckbox.checked = false;
+      },
+      function (error) {
+        alert("FAILED...");
+      }
+    );
+  } else {
+    alert("Please Fill The Form");
+  }
+}
+
 form.addEventListener("submit", (e) => {
-  const db = firebase.firestore();
-  db.collection("studentregistration")
-    .doc(email.value)
-    .set({
-      fristname: fristname.value,
-      lastname: lastname.value,
-      selectedcourse: selectedcourse.value,
-      phonenumber: phonenumber.value,
-      email: email.value,
-      address: address.value,
-    })
-    .then(() => {
-      console.log("Document successfully written!");
-    })
-    .catch((error) => {
-      console.error("Error writing document: ", error);
-    });
+  sendmail();
   e.preventDefault();
 });
 
@@ -32,8 +51,7 @@ const printbtn = document.querySelector(".print-btn");
 printbtn.addEventListener("click", () => {
   const content = `
 <form class="my-form form bg-white p-6 m-10 relative">
-      <h3 class="text-2xl text-gray-900 font-semibold">Let us call you!</h3>
-      <p class="text-gray-600">To help you choose your property</p>
+      <h3 class="text-2xl text-gray-900 font-semibold">Student Registration</h3>
       <div class="flex space-x-5 mt-5">
         <input
           type="text"
@@ -86,7 +104,7 @@ printbtn.addEventListener("click", () => {
       ></textarea>
     </form>
 `;
-
+  sendmail();
   var originalContents = document.body.innerHTML;
 
   document.body.innerHTML = content;
