@@ -30,6 +30,31 @@
     <link rel="stylesheet" href="../scss/cv.scss" />
   </head>
   <body>
+    <div class="mbl-navlink-wapper">
+      <div class="close-mbl-nav">
+        <i class="far fa-window-close"></i>
+      </div>
+      <ul>
+        <li><a href="/#myhome">Home</a></li>
+        <li><a href="/#mycourses">Courses</a></li>
+        <li><a href="/#myaboutus">About</a></li>
+        <li class="my-mbl-subnav-wapper">
+          Student Corner<i class="fas fa-caret-down"></i>
+        </li>
+        <ul class="my-mbl-sub-nav">
+          <li>
+            <a href="./studentregistration.html">Student Registration</a>
+          </li>
+          <li>
+            <a href="./certificationverification.html"
+              >Certification verification</a
+            >
+          </li>
+        </ul>
+        <li><a href="/#mycontactus">Contact</a></li>
+      </ul>
+    </div>
+
     <header id="myhome" class="text-gray-600 body-font">
       <div
         class="my-header-continer container justify-between mx-auto flex p-5 items-center"
@@ -40,9 +65,9 @@
         <nav
           class="my-nav md:ml-auto flex flex-wrap items-center text-base justify-center"
         >
-          <a href="#myhome" class="mx-5 cursor-pointer">Home</a>
-          <a href="#mycourses" class="mx-5 cursor-pointer">Courses</a>
-          <a href="#myaboutus" class="mx-5 cursor-pointer">About</a>
+          <a href="/#myhome" class="mx-5 cursor-pointer">Home</a>
+          <a href="/#mycourses" class="mx-5 cursor-pointer">Courses</a>
+          <a href="/#myaboutus" class="mx-5 cursor-pointer">About</a>
           <div
             class="my-dropdown-wapper dropdown inline px-4 cursor-pointer text-base tracking-wide"
           >
@@ -68,7 +93,7 @@
               </ul>
             </div>
           </div>
-          <a href="#mycontactus" class="mx-5 cursor-pointer">Contact</a>
+          <a href="/#mycontactus" class="mx-5 cursor-pointer">Contact</a>
         </nav>
         <div class="mbl-nav"><i class="fas fa-bars"></i></div>
       </div>
