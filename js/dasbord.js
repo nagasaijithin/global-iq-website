@@ -31,8 +31,10 @@ firebase.auth().onAuthStateChanged((user) => {
   }
 });
 
+const ldwapper = document.querySelector(".ld-wapper");
 form.addEventListener("submit", (e) => {
   if (studentId.value != "" && studentCtc.value != "") {
+    ldwapper.classList.add("sh-ld");
     var storageRef = firebase.storage().ref();
     var firestore = firebase.firestore();
     storageRef
@@ -52,8 +54,10 @@ form.addEventListener("submit", (e) => {
               })
               .then((err) => {
                 alert("Student Add successfully");
+                ldwapper.classList.remove("sh-ld");
                 studentId.value = "";
                 studentCtc.value = "";
+                studentCtclabel.innerHTML = "Add Student certication";
               })
               .catch((err) => {
                 alert(err);

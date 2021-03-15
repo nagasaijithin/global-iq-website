@@ -28,16 +28,14 @@
 }
 
 .my-dropdown-menu {
-  right: 5%;
   z-index: 30;
 
   &-ul {
     background-color: #393939;
-    padding: 1.5rem;
+    padding: 1rem;
     & > li > a {
       padding: 0.8rem 0.3rem;
       border: 1px solid rgb(255, 255, 255);
-      margin: 1rem 0;
     }
   }
 }
