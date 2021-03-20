@@ -7,16 +7,22 @@ const address = document.querySelector(".my-address");
 
 const form = document.querySelector(".my-form");
 
-const mblsubnav = document.querySelector(".my-mbl-sub-nav");
-const mblsubnavwapper = document.querySelector(".my-mbl-subnav-wapper");
-
-mblsubnavwapper.addEventListener("click", (e) => {
-  if (mblsubnav.classList.contains("show-mbl-subanv")) {
-    mblsubnav.classList.remove("show-mbl-subanv");
-  } else {
-    mblsubnav.classList.add("show-mbl-subanv");
-  }
+const regsnwapper = document.querySelector(".my-regsn");
+regsnwapper.addEventListener("keyup", (e) => {
+  var phone = `${e.target.value}`;
+  phone = phone.replace(/(\w{3})(\d{4})(\d+)/, "$1-$2-$3");
+  e.target.value = phone;
 });
+// const mblsubnav = document.querySelector(".my-mbl-sub-nav");
+// const mblsubnavwapper = document.querySelector(".my-mbl-subnav-wapper");
+
+// mblsubnavwapper.addEventListener("click", (e) => {
+//   if (mblsubnav.classList.contains("show-mbl-subanv")) {
+//     mblsubnav.classList.remove("show-mbl-subanv");
+//   } else {
+//     mblsubnav.classList.add("show-mbl-subanv");
+//   }
+// });
 const mblnavlinkwapper = document.querySelector(".mbl-navlink-wapper");
 const mblnavicon = document.querySelector(".mbl-nav");
 mblnavicon.addEventListener("click", (e) => {
@@ -42,7 +48,8 @@ function sendmail() {
     selectedcourse.value != "" &&
     phonenumber.value != "" &&
     email.value != "" &&
-    address.value != ""
+    address.value != "" &&
+    regsnwapper.value != ""
   ) {
     const obj = {
       from_name: "Global Iq Website",
@@ -52,6 +59,7 @@ function sendmail() {
       st_phone: phonenumber.value,
       st_email: email.value,
       st_address: address.value,
+      rg_number: regsnwapper.value,
     };
     emailjs.send("service_24nwyab", "template_tuqbo3m", obj).then(
       function (response) {
@@ -62,6 +70,7 @@ function sendmail() {
         phonenumber.value = "";
         email.value = "";
         address.value = "";
+        regsnwapper.value = "";
       },
       function (error) {
         alert("FAILED...");
@@ -85,7 +94,8 @@ printbtn.addEventListener("click", () => {
     selectedcourse.value != "" &&
     phonenumber.value != "" &&
     email.value != "" &&
-    address.value != ""
+    address.value != "" &&
+    regsnwapper.value != ""
   ) {
     const content = `
     <form class="my-form form bg-white p-6 m-10 relative">

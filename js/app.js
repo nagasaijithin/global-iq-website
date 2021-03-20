@@ -19,16 +19,16 @@ mblconbtn.addEventListener("click", (e) => {
     mblcontformwapper.classList.add("mbl-con-form-content-wapper");
   }
 });
-const mblsubnav = document.querySelector(".my-mbl-sub-nav");
-const mblsubnavwapper = document.querySelector(".my-mbl-subnav-wapper");
+// const mblsubnav = document.querySelector(".my-mbl-sub-nav");
+// const mblsubnavwapper = document.querySelector(".my-mbl-subnav-wapper");
 
-mblsubnavwapper.addEventListener("click", (e) => {
-  if (mblsubnav.classList.contains("show-mbl-subanv")) {
-    mblsubnav.classList.remove("show-mbl-subanv");
-  } else {
-    mblsubnav.classList.add("show-mbl-subanv");
-  }
-});
+// mblsubnavwapper.addEventListener("click", (e) => {
+//   if (mblsubnav.classList.contains("show-mbl-subanv")) {
+//     mblsubnav.classList.remove("show-mbl-subanv");
+//   } else {
+//     mblsubnav.classList.add("show-mbl-subanv");
+//   }
+// });
 const mblnavlinkwapper = document.querySelector(".mbl-navlink-wapper");
 const mblnavicon = document.querySelector(".mbl-nav");
 mblnavicon.addEventListener("click", (e) => {
@@ -113,7 +113,7 @@ var counter = 1;
 setInterval(function () {
   document.getElementById("radio" + counter).checked = true;
   counter++;
-  if (counter > 4) {
+  if (counter > 3) {
     counter = 1;
   }
 }, 5000);

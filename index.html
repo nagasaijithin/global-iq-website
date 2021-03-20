@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Global IQ Software Training</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap"
@@ -28,11 +28,30 @@
       crossorigin="anonymous"
     />
 
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./fav/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./fav/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./fav/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./fav/site.webmanifest" />
+
     <link rel="stylesheet" href="./scss/app.scss" />
   </head>
   <body>
     <div class="whatsappicon">
-      <a href="https://wa.me/+918309205403" target="_blank">
+      <a href="https://wa.me/+919966302065" target="_blank">
         <svg
           style="height: 50px; width: 50px"
           width="50"
@@ -76,9 +95,25 @@
       </div>
       <ul>
         <li><a href="#myhome">Home</a></li>
+        <hr />
         <li><a href="#mycourses">Courses</a></li>
+        <hr />
         <li><a href="#myaboutus">About</a></li>
-        <li class="my-mbl-subnav-wapper">
+        <hr />
+
+        <li>
+          <a href="./public/studentregistration.html">Student Registration</a>
+        </li>
+        <hr />
+        <li><a href="#mycontactus">Contact</a></li>
+        <hr />
+        <li>
+          <a href="./public/certificationverification.html"
+            >Certification verification</a
+          >
+        </li>
+
+        <!-- <li class="my-mbl-subnav-wapper">
           Student Corner<i class="fas fa-caret-down"></i>
         </li>
         <ul class="my-mbl-sub-nav">
@@ -90,8 +125,7 @@
               >Certification verification</a
             >
           </li>
-        </ul>
-        <li><a href="#mycontactus">Contact</a></li>
+        </ul> -->
       </ul>
     </div>
 
@@ -104,12 +138,16 @@
           <img src="./assets/logo.png" alt="" />
         </a>
         <nav
-          class="my-nav md:ml-auto flex flex-wrap items-center text-base justify-center"
+          class="my-nav flex flex-wrap items-center text-base justify-center"
         >
-          <a href="#myhome" class="mx-5 cursor-pointer">Home</a>
-          <a href="#mycourses" class="mx-5 cursor-pointer">Courses</a>
-          <a href="#myaboutus" class="mx-5 cursor-pointer">About</a>
-          <div
+          <a href="#myhome" class="cursor-pointer">Home</a>
+          <a href="#mycourses" class="cursor-pointer">Courses</a>
+          <a href="#myaboutus" class="cursor-pointer">About</a>
+          <a href="./public/studentregistration.html" class="cursor-pointer"
+            >Student Registration</a
+          >
+
+          <!-- <div
             class="my-dropdown-wapper dropdown inline px-4 cursor-pointer text-base tracking-wide"
           >
             <a>Student Corner</a>
@@ -133,8 +171,13 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <a href="#mycontactus" class="mx-5 cursor-pointer">Contact</a>
+          </div> -->
+          <a href="#mycontactus" class="cursor-pointer">Contact</a>
+          <a
+            href="./public/certificationverification.html"
+            class="lstbtn-nav cursor-pointer"
+            >Certification verification</a
+          >
         </nav>
         <div class="mbl-nav"><i class="fas fa-bars"></i></div>
       </div>
@@ -210,33 +253,27 @@
           <input type="radio" name="radio-btn" id="radio1" />
           <input type="radio" name="radio-btn" id="radio2" />
           <input type="radio" name="radio-btn" id="radio3" />
-          <input type="radio" name="radio-btn" id="radio4" />
 
           <div class="slide first">
-            <img src="./assets/slide-img-1.png" alt="" />
+            <img src="./assets/1.jpg" alt="" />
           </div>
           <div class="slide">
-            <img src="./assets/slide-img-2.jpg" alt="" />
+            <img src="./assets/2.jpg" alt="" />
           </div>
           <div class="slide">
-            <img src="./assets/slide-img-1.png" alt="" />
-          </div>
-          <div class="slide">
-            <img src="./assets/slide-img-2.jpg" alt="" />
+            <img src="./assets/tryslideno-3.png" alt="" />
           </div>
 
           <div class="navigation-auto">
             <div class="auto-btn1"></div>
             <div class="auto-btn2"></div>
             <div class="auto-btn3"></div>
-            <div class="auto-btn4"></div>
           </div>
         </div>
         <div class="navigation-manual">
           <label for="radio1" class="manual-btn"></label>
           <label for="radio2" class="manual-btn"></label>
           <label for="radio3" class="manual-btn"></label>
-          <label for="radio4" class="manual-btn"></label>
         </div>
       </div>
     </section>
@@ -355,7 +392,7 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="./assets/javaicon.png" alt="Java" />
+                  <img src="./assets/JAVA.png" alt="Java" />
                 </div>
                 <div class="flip-card-back">
                   <h1>Java</h1>
@@ -373,7 +410,7 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="./assets/pythonicon.png" alt="Python" />
+                  <img src="./assets/PYTHON.png" alt="Python" />
                 </div>
                 <div class="flip-card-back">
                   <h1>Python</h1>
@@ -428,14 +465,16 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="./assets/Tallyicon.png" alt="Tally" />
+                  <img src="./assets/Tallyprime.png" alt="Tally" />
                 </div>
                 <div class="flip-card-back">
                   <h1>Tally</h1>
                   <p>
-                    Tally commonly refers to counting or to summation of a total
-                    amount, debt, or score Tally for knitting, or row counter
-                    for hand knitting.
+                    Tally is basically a computer software which is widely used
+                    for accounting purposes by small and large scale industries
+                    It is an accounting software where all the Banking &
+                    Auditing, Accounting works are done with the help of the
+                    software
                   </p>
                 </div>
               </div>
@@ -500,7 +539,7 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="./assets/gsticon.png" alt="Gst" />
+                  <img src="./assets/GST.png" alt="Gst" />
                 </div>
                 <div class="flip-card-back">
                   <h1>Gst</h1>
@@ -521,11 +560,13 @@
                   <img src="./assets/pgdca.png" alt="Pgdca" />
                 </div>
                 <div class="flip-card-back">
-                  <h1>Pgdca</h1>
+                  <h1>PGDCA</h1>
                   <p>
-                    A postgraduate diploma is a postgraduate qualification
-                    awarded after a university degree,This could be a vocational
-                    course studied after an academic degree Pgdca.
+                    Post Graduate Diploma in Computer Applications (PGDCA) is
+                    designed for graduate students who are interested in
+                    computer applications. ... This program provides
+                    specialisation in computer science with technical,
+                    professional and communications skills.
                   </p>
                 </div>
               </div>
@@ -536,14 +577,14 @@
             <div class="flip-card">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="./assets/dcaicon.png" alt="Avatar" />
+                  <img src="./assets/JOB.png" alt="Avatar" />
                 </div>
                 <div class="flip-card-back">
-                  <h1>Dca</h1>
+                  <h1>Job and Interview Skills</h1>
                   <p>
-                    Diploma in Computer Applications (DCA) is a one year diploma
-                    course in the field of computer applications. It can be
-                    pursued after 10+2 and postgraduation.
+                    This course can give you confidence to face corporate
+                    interview along with it will supports you to reach your goal
+                    in your career.
                   </p>
                 </div>
               </div>
@@ -582,13 +623,9 @@
             <h1
               class="my-title sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-6"
             >
-              GLOBAL IQ ADVANTAGE
+              Why global iq?
             </h1>
-            <p
-              class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto my-5 text-gray-500s"
-            >
-              Just a few reasins why we are your go-to career partner
-            </p>
+
             <div class="flex mt-10 justify-center">
               <div
                 class="my-course-dwn-bar rounded-full bg-indigo-500 inline-flex"
@@ -619,7 +656,7 @@
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/loi58L9NkgE"
+          src="https://www.youtube.com/embed/w9pIQTd-vqI"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -650,20 +687,19 @@
           class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
         >
           <p class="my-about-content my-8 leading-relaxed">
-            Global IQ is the one of the Best Computer institute in narasannapeta
-            It offers different courses with top most faculty and well equipped
-            Ac computer Labs.Global IQ institute was founded by Korada Srikanth
-            the leading evangelist for GST Accounts. Korada Srikanth is an
-            entrepreneur and Trainer in Global IQ, Global IQ was founded on the
-            year 2020 october to teach students in different computer courses
-            and Global IQ is ISO Certified institute
+            Global-IQ is the one of the leading Real-Time Software Training
+            institute in Srikakulam District and its having braches and also Mr.
+            Srikanth Korada is the Managing Director for Global-IQ & SV
+            Associates he is the Real-Time Expert with Certified
+            GST-Practitioner and his main Vision to make students as strong in
+            their future Profession way.
           </p>
         </div>
         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
           <img
             class="object-cover object-center rounded"
             alt="hero"
-            src="https://dummyimage.com/720x600"
+            src="./assets/aboutus.jpg"
           />
         </div>
       </div>
@@ -699,6 +735,12 @@
 
           <!-- Photo 4 -->
           <div class="card_part card_part-four"></div>
+          <!-- Photo 5 -->
+          <div class="card_part card_part-five"></div>
+          <!-- Photo 6 -->
+          <div class="card_part card_part-sixe"></div>
+          <!-- Photo 7 -->
+          <div class="card_part card_part-seven"></div>
         </div>
       </div>
     </div>
@@ -731,19 +773,25 @@
               <i class="fa-building fas"></i> Ysr junction Narasannapeta-532421
               Srikakulam Dist
             </p>
+            <p>
+              <i class="fa-building fas"></i> Tammayyapeta Street, Narasannapeta
+            </p>
           </div>
           <div>
             <h2>Reach Us</h2>
             <p><i class="fa-phone fas"></i>Phone :- 9966302065</p>
             <p>
               <i class="fa-envelope-open-text fas"></i>Gmail:-
-              Globaliq@gmail.com
+              globaliq65@gmail.com
             </p>
           </div>
           <div>
             <h3>Follow Us</h3>
             <div>
-              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a
+                href="https://www.facebook.com/Global-IQ-Software-Training-102134958244304"
+                ><i class="fab fa-facebook"></i
+              ></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-instagram-square"></i></a>
             </div>
@@ -751,7 +799,9 @@
         </div>
         <div class="my-map-wapper lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15465.196504247673!2d80.11123521972573!3d14.294044783462777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4c58409f550bab%3A0x4eabf6f68e4ba70b!2sKrishnapatnam%2C%20Andhra%20Pradesh%20524344!5e0!3m2!1sen!2sin!4v1615133024067!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.468628978984!2d84.04073151489123!3d18.41701968746939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c4728fef5c779%3A0x72068c42e8c8475c!2sGlobal-IQ%20Software%20Training!5e0!3m2!1sen!2sin!4v1615920908799!5m2!1sen!2sin"
+            width="600"
+            height="450"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"

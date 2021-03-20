@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Certification verification | Global Iq</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap"
@@ -27,6 +27,26 @@
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../fav/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../fav/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../fav/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../fav/site.webmanifest" />
+
     <link rel="stylesheet" href="../scss/cv.scss" />
   </head>
   <body>
@@ -36,9 +56,24 @@
       </div>
       <ul>
         <li><a href="/#myhome">Home</a></li>
+        <hr />
         <li><a href="/#mycourses">Courses</a></li>
+        <hr />
         <li><a href="/#myaboutus">About</a></li>
-        <li class="my-mbl-subnav-wapper">
+        <hr />
+        <li>
+          <a href="./studentregistration.html">Student Registration</a>
+        </li>
+        <hr />
+        <li><a href="/#mycontactus">Contact</a></li>
+        <hr />
+        <li>
+          <a href="./certificationverification.html"
+            >Certification verification</a
+          >
+        </li>
+
+        <!-- <li class="my-mbl-subnav-wapper">
           Student Corner<i class="fas fa-caret-down"></i>
         </li>
         <ul class="my-mbl-sub-nav">
@@ -50,8 +85,7 @@
               >Certification verification</a
             >
           </li>
-        </ul>
-        <li><a href="/#mycontactus">Contact</a></li>
+        </ul> -->
       </ul>
     </div>
 
@@ -63,12 +97,22 @@
           <img src="../assets/logo.png" alt="" />
         </a>
         <nav
-          class="my-nav md:ml-auto flex flex-wrap items-center text-base justify-center"
+          class="my-nav flex flex-wrap items-center text-base justify-center"
         >
-          <a href="/#myhome" class="mx-5 cursor-pointer">Home</a>
-          <a href="/#mycourses" class="mx-5 cursor-pointer">Courses</a>
-          <a href="/#myaboutus" class="mx-5 cursor-pointer">About</a>
-          <div
+          <a href="/#myhome" class="cursor-pointer">Home</a>
+          <a href="/#mycourses" class="cursor-pointer">Courses</a>
+          <a href="/#myaboutus" class="cursor-pointer">About</a>
+
+          <a href="./studentregistration.html" class="cursor-pointer"
+            >Student Registration</a
+          >
+          <a href="/#mycontactus" class="cursor-pointer">Contact</a>
+          <a
+            href="./certificationverification.html"
+            class="lstbtn-nav cursor-pointer"
+            >Certification verification</a
+          >
+          <!-- <div
             class="my-dropdown-wapper dropdown inline px-4 cursor-pointer text-base tracking-wide"
           >
             <a>Student Corner</a>
@@ -92,8 +136,7 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <a href="/#mycontactus" class="mx-5 cursor-pointer">Contact</a>
+          </div> -->
         </nav>
         <div class="mbl-nav"><i class="fas fa-bars"></i></div>
       </div>
@@ -103,24 +146,27 @@
       <div
         class="my-cv-wapper flex items-center justify-center w-full px-6 bg-white md:max-w-md lg:max-w-full md:w-1/2 xl:w-1/3 lg:px-16 xl:px-12"
       >
+        <!-- <div class="aprv-img">
+          <img src="../assets/approved.png" alt="" />
+        </div> -->
         <div class="w-full">
           <h1
             class="mt-12 text-2xl font-semibold tracking-ringtighter sm:text-3xl title-font"
           >
-            Enter The Student Id
+            Enter The Certificate Id
           </h1>
-          <form class="my-cv-form m-6">
+          <form class="my-cv-form my-6">
             <div>
               <label
                 for="studentid"
                 class="block text-sm font-medium leading-relaxed tracking-tighter"
-                >Student ID</label
+                >Certificate Id</label
               >
               <input
                 type="text"
                 name=""
                 id="studentid"
-                placeholder="Student id"
+                placeholder="Certificate Id"
                 class="w-full px-4 py-2 mt-2 text-base text-black transition duration-500 ease-in-out transform bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
                 autofocus
                 required
@@ -137,7 +183,18 @@
       </div>
       <div
         class="my-student-info-wapper w-full h-screen bg-white lg:block md:w-1/1 lg:w-2/3"
-      ></div>
+      >
+        <div class="my-student-info hide-s-i">
+          <div><i class="fas fa-user-check"></i></div>
+          <div>Certificate Verified</div>
+        </div>
+        <div class="my-student-info-cert hide-s-i">
+          <div class="apdwaper-img">
+            <img src="../assets/approved.png" alt="" />
+          </div>
+          <div class="fb-data-img"></div>
+        </div>
+      </div>
     </section>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->

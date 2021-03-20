@@ -10,20 +10,20 @@ cvform.addEventListener("submit", (e) => {
     .then((doc) => {
       if (doc.exists) {
         const writedata = `
-<div class="my-student-info">
-          <div><i class="fas fa-user-check"></i></div>
-          <div>Student Verified</div>
-        </div>
-        <div class="my-student-info-cert">
-          <img src="${doc.data().crtfct}" alt="" />
-        </div>
+        <img src="${doc.data().crtfct}" alt="" />
 `;
-        const studentinfowapper = document.querySelector(
-          ".my-student-info-wapper"
-        );
+        const studentinfowapper = document.querySelector(".fb-data-img");
+        const mystifcet = document.querySelector(".my-student-info-cert");
+        const mystif = document.querySelector(".my-student-info");
         studentinfowapper.innerHTML = writedata;
+        mystif.classList.remove("hide-s-i");
+        mystifcet.classList.remove("hide-s-i");
       } else {
         alert("Please Enter A Valid Student Id");
+        const mystifcet = document.querySelector(".my-student-info-cert");
+        const mystif = document.querySelector(".my-student-info");
+        mystif.classList.add("hide-s-i");
+        mystifcet.classList.add("hide-s-i");
       }
     })
     .catch((err) => {
@@ -32,16 +32,16 @@ cvform.addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
-const mblsubnav = document.querySelector(".my-mbl-sub-nav");
-const mblsubnavwapper = document.querySelector(".my-mbl-subnav-wapper");
+// const mblsubnav = document.querySelector(".my-mbl-sub-nav");
+// const mblsubnavwapper = document.querySelector(".my-mbl-subnav-wapper");
 
-mblsubnavwapper.addEventListener("click", (e) => {
-  if (mblsubnav.classList.contains("show-mbl-subanv")) {
-    mblsubnav.classList.remove("show-mbl-subanv");
-  } else {
-    mblsubnav.classList.add("show-mbl-subanv");
-  }
-});
+// mblsubnavwapper.addEventListener("click", (e) => {
+//   if (mblsubnav.classList.contains("show-mbl-subanv")) {
+//     mblsubnav.classList.remove("show-mbl-subanv");
+//   } else {
+//     mblsubnav.classList.add("show-mbl-subanv");
+//   }
+// });
 const mblnavlinkwapper = document.querySelector(".mbl-navlink-wapper");
 const mblnavicon = document.querySelector(".mbl-nav");
 mblnavicon.addEventListener("click", (e) => {

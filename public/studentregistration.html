@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Student Registration | Global Iq</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap"
@@ -20,6 +20,26 @@
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../fav/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../fav/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../fav/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../fav/site.webmanifest" />
+
     <link rel="stylesheet" href="../scss/str.scss" />
   </head>
   <body>
@@ -29,9 +49,24 @@
       </div>
       <ul>
         <li><a href="/#myhome">Home</a></li>
+        <hr />
         <li><a href="/#mycourses">Courses</a></li>
+        <hr />
         <li><a href="/#myaboutus">About</a></li>
-        <li class="my-mbl-subnav-wapper">
+        <hr />
+
+        <li>
+          <a href="./studentregistration.html">Student Registration</a>
+        </li>
+        <hr />
+        <li><a href="/#mycontactus">Contact</a></li>
+        <hr />
+        <li>
+          <a href="./certificationverification.html"
+            >Certification verification</a
+          >
+        </li>
+        <!-- <li class="my-mbl-subnav-wapper">
           Student Corner<i class="fas fa-caret-down"></i>
         </li>
         <ul class="my-mbl-sub-nav">
@@ -43,8 +78,7 @@
               >Certification verification</a
             >
           </li>
-        </ul>
-        <li><a href="/#mycontactus">Contact</a></li>
+        </ul> -->
       </ul>
     </div>
 
@@ -57,12 +91,21 @@
           <img src="../assets/logo.png" alt="" />
         </a>
         <nav
-          class="my-nav md:ml-auto flex flex-wrap items-center text-base justify-center"
+          class="my-nav flex flex-wrap items-center text-base justify-center"
         >
-          <a href="/#myhome" class="mx-5 cursor-pointer">Home</a>
-          <a href="/#mycourses" class="mx-5 cursor-pointer">Courses</a>
-          <a href="/#myaboutus" class="mx-5 cursor-pointer">About</a>
-          <div
+          <a href="/#myhome" class="cursor-pointer">Home</a>
+          <a href="/#mycourses" class="cursor-pointer">Courses</a>
+          <a href="/#myaboutus" class="cursor-pointer">About</a>
+          <a href="./studentregistration.html" class="cursor-pointer"
+            >Student Registration</a
+          >
+          <a href="/#mycontactus" class="cursor-pointer">Contact</a>
+          <a
+            href="./certificationverification.html"
+            class="lstbtn-nav cursor-pointer"
+            >Certification verification</a
+          >
+          <!-- <div
             class="my-dropdown-wapper dropdown inline px-4 cursor-pointer text-base tracking-wide"
           >
             <a>Student Corner</a>
@@ -86,8 +129,7 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <a href="/#mycontactus" class="mx-5 cursor-pointer">Contact</a>
+          </div> -->
         </nav>
         <div class="mbl-nav"><i class="fas fa-bars"></i></div>
       </div>
@@ -113,9 +155,9 @@
         />
       </div>
 
-      <div class="space-x-5 mt-5">
+      <div class="flex space-x-5 mt-5">
         <select
-          class="my-select-course try-pass w-full bg-white rounded border border-gray-300 focus:border-black-500 focus:ring-2 focus:ring-black-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
+          class="my-select-course try-pass w-1/2 bg-white rounded border border-gray-300 focus:border-black-500 focus:ring-2 focus:ring-black-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
         >
           <option value="" selected="selected">Select Course</option>
           <option value="tally">Tally</option>
@@ -131,6 +173,13 @@
           <option value="pgdca">PGDCA</option>
           <option value="dpa">DPA</option>
         </select>
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="Registration Number"
+          class="my-regsn border p-2 w-1/2"
+        />
       </div>
 
       <div class="flex space-x-5 mt-5">

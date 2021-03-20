@@ -34,16 +34,26 @@ body {
   }
   & > .my-nav,
   .my-dropdown-wapper {
-    font-size: 1.4rem;
+    font-size: 1rem;
+    text-transform: uppercase;
   }
 }
 
 .my-nav {
-  @media (max-width: 852px) {
+  flex-basis: 66%;
+  justify-content: space-between;
+  @media (max-width: 1247px) {
+    flex-basis: 73%;
+  }
+  @media (max-width: 1147px) {
     display: none;
   }
 }
-
+.lstbtn-nav {
+  padding: 0.5rem;
+  border-radius: 6px;
+  background-color: #d44783;
+}
 .dropdown:hover > .dropdown-menu {
   display: block;
 }
@@ -105,6 +115,7 @@ body {
   & > input {
     flex-basis: 10%;
     margin: 0 0.5rem;
+    transform: scale(1.5);
   }
   & > p {
     font-size: 0.7rem;
@@ -154,7 +165,7 @@ body {
   font-size: 3rem;
   cursor: pointer;
   display: none;
-  @media (max-width: 852px) {
+  @media (max-width: 1147px) {
     display: block;
     font-size: 1.5rem;
   }
@@ -196,7 +207,7 @@ body {
           }
           & > h2 {
             padding: 1rem;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 500;
           }
         }
@@ -230,12 +241,31 @@ body {
 
 .my-gallary-img-wapper {
   width: 60%;
-  height: 70vh;
+  height: 78vh;
   margin: 0 auto;
   background: black;
   box-shadow: 1px 2px 20px -3px #313131d1;
+  @media (max-width: 1014px) {
+    width: 80%;
+    height: 74vh;
+  }
+  @media (max-width: 791px) {
+    height: 63vh;
+  }
+  @media (max-width: 691px) {
+    height: 58vh;
+    width: 88%;
+  }
   @media (max-width: 482px) {
     width: 86%;
+    height: 42vh;
+  }
+  @media (max-width: 375px) {
+    height: 36vh;
+  }
+  @media (max-width: 320px) {
+    height: 33vh;
+    width: 95%;
   }
 }
 .my-c-block {
@@ -323,7 +353,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 7;
+  z-index: 10;
 
   display: flex;
   align-items: center;
@@ -334,27 +364,43 @@ body {
   background-repeat: no-repeat;
 
   transform: translateX(100%);
-  background-image: url(https://github.com/Flat-Pixels/assets_hosting/blob/master/picture_slides/1.jpg?raw=true);
+  background-image: url("../assets/students3.jpg");
 
   animation: opaqTransition 28s cubic-bezier(0, 0, 0, 0.97) infinite;
 }
 
 .card_part.card_part-two {
-  z-index: 6;
-  background-image: url(https://github.com/Flat-Pixels/assets_hosting/blob/master/picture_slides/2.jpg?raw=true);
+  z-index: 9;
+  background-image: url("../assets/IQ1.jpg");
   animation-delay: 7s;
 }
 
 .card_part.card_part-three {
-  z-index: 5;
-  background-image: url(https://github.com/Flat-Pixels/assets_hosting/blob/master/picture_slides/3.jpg?raw=true);
+  z-index: 8;
+  background-image: url("../assets/students.jpg");
   animation-delay: 14s;
 }
 
 .card_part.card_part-four {
-  z-index: 4;
-  background-image: url(https://github.com/Flat-Pixels/assets_hosting/blob/master/picture_slides/4.jpg?raw=true);
+  z-index: 7;
+  background-image: url("../assets/GIQ\ Goal.jpg");
   animation-delay: 21s;
+}
+
+.card_part.card_part-five {
+  z-index: 6;
+  background-image: url("../assets/kid1.jpg");
+  animation-delay: 28s;
+}
+.card_part.card_part-sixe {
+  z-index: 5;
+  background-image: url("../assets/KID3.jpg");
+  animation-delay: 35s;
+}
+.card_part.card_part-seven {
+  z-index: 4;
+  background-image: url("../assets/computer-training-500x500.png");
+  animation-delay: 42s;
 }
 
 @keyframes opaqTransition {
@@ -586,6 +632,9 @@ body {
     justify-content: flex-end;
     margin: 1rem;
     font-size: 3rem;
+    @media (max-width: 425px) {
+      font-size: 2.2rem;
+    }
     & > i {
       margin: 0 2rem;
     }
@@ -595,10 +644,19 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     font-size: 1.6rem;
     font-weight: 500;
+    padding: 0 3rem;
+    @media (max-width: 425px) {
+      font-size: 1.3rem;
+    }
+    & > hr {
+      border: 1px solid #393939ab;
+      width: 100%;
+    }
+
     & > li > i {
       margin: 0 2rem;
     }
@@ -635,8 +693,8 @@ body {
   cursor: pointer;
   box-shadow: 1px 1px 10px -5px black;
   transition: all 1s ease-in;
-  @media (max-width: 768px) {
-    right: 1.5rem;
+  @media (max-width: 770px) {
+    font-size: 1.5rem;
   }
 }
 
@@ -644,6 +702,7 @@ body {
   right: 2rem;
   transition: all 0.5s ease-in;
   @media (max-width: 768px) {
+    right: 1.5rem;
     font-size: 1.5rem;
     padding: 0.2rem 0.5rem;
   }
@@ -701,7 +760,7 @@ body {
 }
 .whatsappicon {
   position: fixed;
-  right: 2.5rem;
+  right: 1.5rem;
   bottom: 6rem;
   z-index: 30;
 }
