@@ -87,6 +87,7 @@ form.addEventListener("submit", (e) => {
 });
 
 const printbtn = document.querySelector(".print-btn");
+const srtlogo = document.querySelector(".srtlogo").src;
 printbtn.addEventListener("click", () => {
   if (
     fristname.value != "" &&
@@ -98,7 +99,13 @@ printbtn.addEventListener("click", () => {
     regsnwapper.value != ""
   ) {
     const content = `
-    <form class="my-form form bg-white p-6 m-10 relative">
+    <div>
+    <img src="${srtlogo}" style="
+    width: 60%;
+    margin: 0 auto;
+"/>
+    </div>
+    <form class="my-form form bg-white w-full relative">
           <h3 class="text-2xl text-gray-900 font-semibold">Student Registration</h3>
           <div class="flex space-x-5 mt-5">
             <input
@@ -116,15 +123,22 @@ printbtn.addEventListener("click", () => {
               class="my-last-name border p-2 w-1/2"
             />
           </div>
-    
-          <div class="space-x-5 mt-5">
+
+          <div class="flex space-x-5 mt-5">
             <select
-              class="my-select-course try-pass w-full bg-white rounded border border-gray-300 focus:border-black-500 focus:ring-2 focus:ring-black-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              class="my-select-course try-pass w-1/2 bg-white rounded border border-gray-300 focus:border-black-500 focus:ring-2 focus:ring-black-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
             >
               <option value="${selectedcourse.value}" selected="selected">${selectedcourse.value}</option>
             </select>
+            <input
+          type="text"
+          name=""
+          id=""
+          placeholder="${regsnwapper.value}"
+          class="my-regsn border p-2 w-1/2"
+        />
           </div>
-    
+
           <div class="flex space-x-5 mt-5">
             <input
               type="E-mail"
@@ -141,7 +155,7 @@ printbtn.addEventListener("click", () => {
               class="my-phone-number border p-2 w-1/2"
             />
           </div>
-    
+
           <textarea
             name=""
             id=""
@@ -153,7 +167,7 @@ printbtn.addEventListener("click", () => {
         </form>
     `;
     sendmail();
-    var a = window.open("", "", "height=500, width=500");
+    var a = window.open("", "", "height=1200, width=640");
     a.document.write("<html>");
     a.document.write(
       `<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>`

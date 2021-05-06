@@ -5,6 +5,13 @@ const studentCtclabel = document.querySelector(".my-s-a-f-l");
 const studentId = document.querySelector(".my-add-student-id");
 const signoutbtn = document.querySelector("#signout");
 const auth = firebase.auth();
+
+studentId.addEventListener("keyup", (e) => {
+  var phone = `${e.target.value}`;
+  phone = phone.replace(/(\w{3})(\d{4})(\d{4})/, "$1-$2-$3");
+  e.target.value = phone;
+});
+
 signoutbtn.addEventListener("click", (e) => {
   auth.signOut();
   window.location.replace("/public/login.html");
@@ -33,23 +40,24 @@ firebase.auth().onAuthStateChanged((user) => {
 
 const ldwapper = document.querySelector(".ld-wapper");
 form.addEventListener("submit", (e) => {
+  const fliterid = studentId.value.replace(/[-\s]/g, "");
   if (studentId.value != "" && studentCtc.value != "") {
     ldwapper.classList.add("sh-ld");
     var storageRef = firebase.storage().ref();
     var firestore = firebase.firestore();
     storageRef
-      .child("student_ctfct/" + studentId.value)
+      .child("student_ctfct/" + fliterid)
       .put(studentCtc.files[0])
       .then((data) => {
         storageRef
-          .child("student_ctfct/" + studentId.value)
+          .child("student_ctfct/" + fliterid)
           .getDownloadURL()
           .then((url) => {
             firestore
               .collection("students")
-              .doc(studentId.value)
+              .doc(fliterid)
               .set({
-                studentid: studentId.value,
+                studentid: fliterid,
                 crtfct: url,
               })
               .then((err) => {

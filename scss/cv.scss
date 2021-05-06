@@ -12,7 +12,16 @@
     height: 59vh;
   }
 }
-
+.printbtn {
+  text-align: center;
+  & > button {
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    background-color: #99144d;
+    color: white;
+    border-radius: 6px;
+  }
+}
 .my-submit-btn {
   background: white;
   color: #393939;
@@ -127,7 +136,7 @@
 .lstbtn-nav {
   padding: 0.5rem;
   border-radius: 6px;
-  background-color: #d44783;
+  background-color: #99144d;
 }
 
 #myhome {
